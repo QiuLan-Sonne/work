@@ -46,27 +46,66 @@
             margin-right: auto;
             line-height: 1.6;
         }
+        section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        section p {
+            font-size: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>井底之蛙 - 文生视频展示</h1>
+        <h1>邱兰work3——“井底之蛙”文生视频展示</h1>
     </header>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video controls width="80%">
+            <source src="https://github.com/QiuLan-Sonne/work/raw/refs/heads/main/work3-video.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <!-- Description Section -->
     <div class="description">
         <p>“井底之蛙”是一个寓意深刻的成语，常用来形容眼界狭隘、不了解外面世界的人。以下是通过文生图生成的4个关键帧，展示了这只青蛙从井底到跳出井口，探索外面世界的过程。</p>
     </div>
 
-    <!-- Video Section -->
-    <div class="video-container">
-        <video controls width="80%">
-            <source src="https://github.com/QiuLan-Sonne/work/raw/refs/heads/main/work3-video.mp4" type="video/mp4">
-            您的浏览器不支持视频标签。
-        </video>
-    </div>
+    <!-- Scene 1: The frog in the well -->
+    <section>
+        <h2>场景一：青蛙在井底</h2>
+        <p>在这幅图中，我们看到青蛙生活在古老的井底。它的眼睛仰望着狭小的井口，视野受限。井壁上青苔斑驳，井口光线微弱，青蛙只能看到一小片明亮的天空。它无法看到外面的世界，完全被井壁束缚。</p>
+    </section>
+
+    <!-- Scene 2: Frog jumping towards the well opening -->
+    <section>
+        <h2>场景二：青蛙跳跃向井口</h2>
+        <p>在这个场景中，青蛙奋力跳跃，试图向井口爬去。它的双腿伸展，眼神充满决心，想要突破井底的限制。井口的光线在青蛙的眼前越来越明亮，似乎是希望的象征。青蛙试图打破自己的局限，向更广阔的世界迈进。</p>
+    </section>
+
+    <!-- Scene 3: The outside world beyond the well -->
+    <section>
+        <h2>场景三：井口外的辽阔世界</h2>
+        <p>这个场景展示了井口外的辽阔世界。蓝天、白云和广阔的田野让人感到自由和开阔，阳光洒满大地，鸟儿在高空飞翔。井外的景象与井底的局限形成鲜明对比，展现了青蛙眼界的狭小与外界的广阔。青蛙无法理解这些美景，但它的渴望逐渐点燃了跳出井底的动力。</p>
+    </section>
+
+    <!-- Scene 4: Frog jumping out of the well -->
+    <section>
+        <h2>场景四：青蛙跳出井口，看到新世界</h2>
+        <p>终于，青蛙成功地跳出了井口，站在井边，它看着四周的广阔天地。它兴奋地张望，眼前的世界如此新奇：湛蓝的天空，绿意盎然的树木，远处高耸的山脉。青蛙终于突破了井底的束缚，开始了探索广阔世界的旅程。</p>
+    </section>
 
     <!-- Footer Section -->
     <footer>
