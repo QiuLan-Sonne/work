@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邱兰work3——“井底之蛙”文生视频展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>井底之蛙 - 文生视频展示</h1>
+    </header>
+
+    <!-- Description Section -->
+    <div class="description">
+        <p>“井底之蛙”是一个寓意深刻的成语，常用来形容眼界狭隘、不了解外面世界的人。以下是通过文生图生成的4个关键帧，展示了这只青蛙从井底到跳出井口，探索外面世界的过程。</p>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video controls width="80%">
+            <source src="https://github.com/your-username/your-repo-name/raw/main/jingdi-zhi-wa-video.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+        </video>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 井底之蛙文生视频展示</p>
+    </footer>
+
+</body>
+</html>
