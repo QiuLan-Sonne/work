@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>邱兰work3——“井底之蛙”文生视频展示</title>
     <style>
-        /* 页面基础设置 */
+        /* 基础设置 */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Verdana', sans-serif;
+            background-color: #e8f9f3;
             color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            text-align: center;
+            background-image: url('https://www.example.com/background.jpg'); /* 添加有趣的背景图 */
+            background-size: cover;
         }
         
+        /* 头部样式 */
         header {
-            background-color: #4CAF50;
+            background-color: rgba(0, 128, 0, 0.8);
             color: white;
-            padding: 20px;
+            padding: 40px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #006400;
         }
         
         header h1 {
             margin: 0;
-            font-size: 36px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 40px;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         }
 
         .video-container {
-            text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         
         footer {
@@ -40,67 +45,78 @@
             text-align: center;
             padding: 10px;
             margin-top: 40px;
+            font-size: 16px;
         }
         
         footer p {
             margin: 0;
-            font-size: 14px;
         }
 
-        /* 描述区 */
+        /* 场景描述部分 */
         .description {
             text-align: center;
             margin-top: 20px;
+            font-size: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* 关键帧场景部分 */
+        section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+            position: relative;
+        }
+
+        section:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        section h2 {
+            font-size: 26px;
+            color: #006400;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+        
+        section p {
             font-size: 18px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.6;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* 每个场景的描述 */
-        section {
-            margin-top: 40px;
-            text-align: center;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        section:hover {
-            transform: scale(1.03);
-        }
-
-        section h2 {
-            font-size: 28px;
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-        
-        section p {
-            font-size: 16px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-top: 10px;
             text-align: justify;
         }
 
-        /* 动画 */
-        .fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-
+        /* 动画效果 */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
+        }
+
+        /* 青蛙图标和装饰 */
+        .frog-icon {
+            font-size: 60px;
+            color: #32CD32;
+            animation: jump 1s ease-in-out infinite;
+        }
+
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         /* 视频样式 */
@@ -108,72 +124,76 @@
             width: 90%;
             max-width: 800px;
             margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* 分隔线 */
+        /* 场景分隔线 */
         hr {
             border: 0;
             height: 1px;
-            background: #ddd;
+            background: #4CAF50;
             margin-top: 30px;
             margin-bottom: 30px;
         }
 
+        /* 页面整体间距 */
+        .container {
+            margin: 0 20px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- 头部 -->
     <header>
-        <h1>邱兰work3——“井底之蛙”文生视频展示</h1>
+        <h1>邱兰work3——“井底之蛙”文生视频展示 <span class="frog-icon">🐸</span></h1>
     </header>
 
-    <!-- 视频展示区 -->
-    <div class="video-container fade-in">
+    <!-- 视频展示 -->
+    <div class="video-container container">
         <video controls>
             <source src="https://github.com/QiuLan-Sonne/work/raw/refs/heads/main/work3-video.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
         </video>
     </div>
 
     <!-- 介绍描述 -->
-    <div class="description fade-in">
+    <div class="description container">
         <p>“井底之蛙”是一个寓意深刻的成语，常用来形容眼界狭隘、不了解外面世界的人。以下是通过文生图生成的4个关键帧，展示了这只青蛙从井底到跳出井口，探索外面世界的过程。</p>
     </div>
 
     <!-- 场景一 -->
-    <section class="fade-in">
+    <section class="container fade-in">
         <h2>场景一：青蛙在井底</h2>
-        <p>在这幅图中，青蛙生活在古老的井底。它的眼睛仰望着狭小的井口，视野受限。井壁上青苔斑驳，井口光线微弱，青蛙只能看到一小片明亮的天空。它无法看到外面的世界，完全被井壁束缚。</p>
+        <p>青蛙站在井底，仰望着狭小的井口。周围是湿润的井壁，青苔覆盖了墙壁，阳光透过井口微弱地照射进来。青蛙的视野被井壁限制，无法看到外面广阔的天地。</p>
     </section>
 
     <!-- 场景二 -->
-    <section class="fade-in">
+    <section class="container fade-in">
         <h2>场景二：青蛙跳跃向井口</h2>
-        <p>在这个场景中，青蛙奋力跳跃，试图向井口爬去。它的双腿伸展，眼神充满决心，想要突破井底的限制。井口的光线在青蛙的眼前越来越明亮，似乎是希望的象征。青蛙试图打破自己的局限，向更广阔的世界迈进。</p>
+        <p>青蛙不断地向井口跳跃，奋力向上爬。它的身体弯曲，双腿用力推地，眼中充满决心。它知道，只有跳出井底，才能看到更广阔的世界。</p>
     </section>
 
     <!-- 场景三 -->
-    <section class="fade-in">
+    <section class="container fade-in">
         <h2>场景三：井口外的辽阔世界</h2>
-        <p>这个场景展示了井口外的辽阔世界。蓝天、白云和广阔的田野让人感到自由和开阔，阳光洒满大地，鸟儿在高空飞翔。井外的景象与井底的局限形成鲜明对比，展现了青蛙眼界的狭小与外界的广阔。青蛙无法理解这些美景，但它的渴望逐渐点燃了跳出井底的动力。</p>
+        <p>井口外的天空一片湛蓝，白云漂浮在空中。远处是一望无际的田野和高山，微风吹拂着树木，鸟儿在空中翱翔。青蛙从未见过如此美丽的景象，它被这片广阔的天地所震撼。</p>
     </section>
 
     <!-- 场景四 -->
-    <section class="fade-in">
+    <section class="container fade-in">
         <h2>场景四：青蛙跳出井口，看到新世界</h2>
-        <p>终于，青蛙成功地跳出了井口，站在井边，它看着四周的广阔天地。它兴奋地张望，眼前的世界如此新奇：湛蓝的天空，绿意盎然的树木，远处高耸的山脉。青蛙终于突破了井底的束缚，开始了探索广阔世界的旅程。</p>
+        <p>最终，青蛙成功地跳出了井口，站在井边，眼前是无比辽阔的世界。它兴奋地四处张望，新的景象让它充满了好奇和激动。青蛙终于摆脱了井底的束缚，探索了一个全新的世界。</p>
     </section>
 
     <!-- 分隔线 -->
     <hr>
 
-    <!-- Footer Section -->
+    <!-- 页脚 -->
     <footer>
         <p>&copy; 2024 井底之蛙文生视频展示</p>
     </footer>
 
 </body>
 </html>
-
