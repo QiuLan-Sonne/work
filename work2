@@ -57,7 +57,7 @@
 
         <h2>生成的图像：</h2>
         <!-- 这里替换成你生成的图像的链接 -->
-        <img src="生成的图片链接.jpg" alt="井底之蛙的图像">
+        <img src="https://github.com/QiuLan-Sonne/work/blob/main/work2-picture.png?raw=true.jpg" alt="井底之蛙的图像">
 
         <h2>图像生成过程：</h2>
         <p>我们使用 AI 文生图技术，通过输入成语“井底之蛙”的描述，生成了这幅图像。AI 根据成语的寓意和图像描述，绘制了一只坐在井底的青蛙，并通过外部的广阔景象来表现井底与外界的巨大差距。</p>
