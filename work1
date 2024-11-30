@@ -4,87 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>时间管理的技巧</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        /* 引入 Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+        /* 全局样式 */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #00b4d8, #ff8c00);
+            color: #444; /* 使用浅灰色字体 */
+            line-height: 1.8;
+            overflow-x: hidden;
         }
+
         h1, h2, h3 {
-            color: #333;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            font-family: 'Roboto', sans-serif;
         }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 50px;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 40px;
+            font-weight: 700;
+            background: #ff8c00;
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
         p {
-            color: #555;
-            font-size: 1.1em;
+            font-size: 1.2rem;
+            margin: 20px 10%;
+            color: #f5f5f5;
+            text-align: center;
+            font-style: italic;
         }
+
+        /* 卡片式设计 */
+        .card {
+            background-color: #fff;
+            margin: 20px 10%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
         ul, ol {
             margin-left: 20px;
+            padding-left: 20px;
         }
+
         ul li, ol li {
-            margin: 10px 0;
+            margin: 12px 0;
+            font-size: 1.1em;
+            color: #444;
+            position: relative;
         }
+
+        ul li:before, ol li:before {
+            content: '\2022'; /* Bullet symbol */
+            font-size: 2em;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            color: #ff8c00;
+        }
+
         mark {
-            background-color: #ff0;
+            background-color: #ffeb3b;
+            padding: 0 5px;
+            border-radius: 4px;
+            font-weight: bold;
         }
+
         strong {
             color: #d32f2f;
+            font-weight: 600;
         }
+
         footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
             background-color: #333;
             color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .highlight {
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            background-color: #ff8c00;
+            border: none;
+            padding: 15px 25px;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin: 20px auto;
+            display: block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: #ff5722;
+            transform: scale(1.05);
+        }
+
+        /* 图标样式 */
+        .icon {
+            color: #ff6347;
+            font-size: 1.8em;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>时间管理的技巧</h1>
-    <p>在当今快速发展的社会中，时间管理成为了提高工作效率和生活质量的关键因素。合理的时间规划不仅能够帮助你提高生产力，还能让你有更多时间享受生活。</p>
+    <!-- 主标题 -->
+    <h1 class="fade-in">时间管理的技巧</h1>
+    <p class="fade-in">在这个快节奏的时代，合理的时间管理能够让你高效工作，享受生活。来看看这些实用的技巧吧！</p>
 
-    <h2>有效的时间管理技巧</h2>
-    <p>以下是几种被广泛推荐的时间管理技巧，可以帮助你更好地利用时间：</p>
+    <!-- 时间管理技巧部分 -->
+    <h2 class="fade-in">💡 高效的时间管理技巧</h2>
+    <div class="card fade-in">
+        <ul>
+            <li><i class="fa fa-clock icon"></i><strong>🍅 番茄工作法</strong>：使用25分钟专注工作，5分钟休息的小周期来保持效率。</li>
+            <li><i class="fa fa-calendar icon"></i><strong>时间块管理法</strong>：将一天划分为几个时间块，专注于完成特定任务。</li>
+            <li><i class="fa fa-check-square icon"></i><strong>优先级排序</strong>：根据任务的重要性和紧急度安排优先级。</li>
+            <li><i class="fa fa-list-alt icon"></i><strong>清单法</strong>：每天列出任务清单，帮助你明确目标并有效减少拖延。</li>
+        </ul>
+    </div>
 
-    <ul>
-        <li><strong>番茄工作法</strong>：采用25分钟集中工作，5分钟休息的循环，有效提升专注力。</li>
-        <li><strong>时间块管理法</strong>：把一天的时间分割成几个时间块，专注于一个任务。</li>
-        <li><strong>优先级排序</strong>：根据任务的紧急程度和重要性，合理安排优先顺序。</li>
-        <li><strong>清单法</strong>：制定每天的任务清单，帮助你明确目标并减少拖延。</li>
-    </ul>
+    <!-- 关键时间管理要点 -->
+    <h2 class="fade-in">🎯 关键要点</h2>
+    <div class="card fade-in">
+        <ol>
+            <li><strong>设定明确的目标</strong>：没有目标的时间管理就像迷失在森林里。</li>
+            <li><strong>保持灵活性</strong>：计划可以改变，但你要始终保持目标清晰。</li>
+            <li><strong>避免过度安排</strong>：不要给自己过多的负担，留点时间喘口气。</li>
+            <li><strong>学会拒绝</strong>：拒绝那些不重要或无意义的任务。</li>
+        </ol>
+    </div>
 
-    <h2>关键时间管理要点</h2>
-    <p>时间管理的核心不仅是技巧，还是 mindset（心态）。以下是几个重要的要点：</p>
+    <!-- 时间管理误区 -->
+    <h2 class="fade-in">⚠️ 时间管理的误区</h2>
+    <div class="card fade-in">
+        <dl>
+            <dt><i class="fa fa-exclamation-triangle icon"></i><strong>误区 1：</strong>计划过于详细</dt>
+            <dd>过于详细的计划让你失去了灵活性，反而让任务变得更加压迫。</dd>
 
-    <ol>
-        <li><strong>设定明确的目标</strong>：没有目标的时间管理就像是没有方向的船。</li>
-        <li><strong>保持灵活性</strong>：尽管有计划，但有时需要根据实际情况进行调整。</li>
-        <li><strong>避免过度安排</strong>：不要将每分钟都排得满满的，给自己留出空隙。</li>
-        <li><strong>学会拒绝</strong>：学会拒绝不重要的事情，让重要的事情得到足够关注。</li>
-    </ol>
+            <dt><i class="fa fa-exclamation-triangle icon"></i><strong>误区 2：</strong>过度自律</dt>
+            <dd>严格的时间安排可能让你感到焦虑，反而影响长期执行力。</dd>
 
-    <h2>时间管理中的误区</h2>
-    <p>很多人在进行时间管理时会犯一些常见的错误，以下是几个典型的误区：</p>
+            <dt><i class="fa fa-exclamation-triangle icon"></i><strong>误区 3：</strong>缺乏休息时间</dt>
+            <dd>持续的工作会导致疲劳，长时间没有休息会影响你的工作效率。</dd>
+        </dl>
+    </div>
 
-    <dl>
-        <dt><strong>误区 1：</strong>计划过于详细</dt>
-        <dd>很多人为了提高效率，制定了过于详细的日程安排，结果反而陷入了计划的细节中，忽略了整体目标。</dd>
+    <!-- 总结 -->
+    <h3 class="fade-in">🌟 总结</h3>
+    <div class="card fade-in">
+        <p><strong>良好的时间管理不仅提高效率，还能帮助你更好地平衡工作与生活。</strong></p>
+        <p>只要合理安排时间，你就能在忙碌中享受更轻松的生活。</p>
+        <p><mark style="background-color: #ffeb3b; color: #ff6347; font-weight: bold;">记得保持灵活性、设定目标，并合理安排每一天！</mark></p>
+        <p><mark style="background-color: #ffeb3b; color: #ff6347; font-weight: bold;">开始高效工作，享受每一刻！</mark></p>
+    </div>
 
-        <dt><strong>误区 2：</strong>过度自律</dt>
-        <dd>过于严格的时间管理可能导致心理压力增大，反而不利于长期坚持。</dd>
+    <!-- 鼓励按钮 -->
+    <a href="#" class="btn fade-in">开始高效工作！</a>
 
-        <dt><strong>误区 3：</strong>缺乏休息时间</dt>
-        <dd>忽视休息和放松时间会导致疲劳积累，反而降低工作效率。</dd>
-    </dl>
-
-    <h3>总结</h3>
-    <p><strong>良好的时间管理是成功的关键</strong>。通过合理安排工作和生活，你可以做到高效而不焦虑。记住，不仅要管理时间，还要管理好自己的精力和心态。</p>
-    <p>最后，<mark>保持灵活性和适时调整</mark>，是实现长期高效时间管理的秘诀。</p>
-
-    <footer>
-        <p>© 2024 时间管理学堂 | 打破拖延，迎接效率</p>
+    <!-- 页脚 -->
+    <footer class="fade-in">
+        <p>© 2024 小邱的时间管理学堂 | 打破拖延，迎接效率</p>
     </footer>
 
 </body>
