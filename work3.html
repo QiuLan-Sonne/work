@@ -12,12 +12,17 @@
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             line-height: 1.6;
             text-align: center;
-            background-image: url('https://www.example.com/background.jpg'); /* 添加有趣的背景图 */
+            background-image: url('https://www.example.com/background.jpg');
             background-size: cover;
         }
-        
+
         /* 头部样式 */
         header {
             background-color: rgba(0, 128, 0, 0.8);
@@ -26,8 +31,10 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-bottom: 5px solid #006400;
+            width: 100%;
+            max-width: 1200px; /* 限制头部宽度 */
         }
-        
+
         header h1 {
             margin: 0;
             font-size: 40px;
@@ -35,21 +42,18 @@
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         }
 
+        /* 视频容器样式 */
         .video-container {
             margin-top: 30px;
+            width: 90%;
+            max-width: 1200px; /* 限制最大宽度 */
         }
-        
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 40px;
-            font-size: 16px;
-        }
-        
-        footer p {
-            margin: 0;
+
+        video {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* 场景描述部分 */
@@ -68,15 +72,24 @@
             animation: fadeIn 1s ease-out;
         }
 
-        /* 关键帧场景部分 */
+        /* 每个场景块的样式 */
         section {
             margin-top: 40px;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 900px; /* 限制宽度 */
+            text-align: left;
+            margin-left: auto;  /* 水平居中 */
+            margin-right: auto;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
         }
 
         section:hover {
@@ -90,7 +103,7 @@
             margin-bottom: 15px;
             font-family: 'Georgia', serif;
         }
-        
+
         section p {
             font-size: 18px;
             max-width: 800px;
@@ -107,7 +120,7 @@
             100% { opacity: 1; }
         }
 
-        /* 青蛙图标和装饰 */
+        /* 青蛙图标 */
         .frog-icon {
             font-size: 60px;
             color: #32CD32;
@@ -119,28 +132,28 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* 视频样式 */
-        video {
-            width: 90%;
-            max-width: 800px;
-            margin-top: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* 场景分隔线 */
+        /* 分隔线 */
         hr {
             border: 0;
             height: 1px;
             background: #4CAF50;
             margin-top: 30px;
             margin-bottom: 30px;
+            width: 80%;
         }
 
-        /* 页面整体间距 */
-        .container {
-            margin: 0 20px;
+        /* 页脚样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 1200px;
         }
+
     </style>
 </head>
 <body>
@@ -151,7 +164,7 @@
     </header>
 
     <!-- 视频展示 -->
-    <div class="video-container container">
+    <div class="video-container">
         <video controls>
             <source src="https://github.com/QiuLan-Sonne/work/raw/refs/heads/main/work3-video.mp4" type="video/mp4">
             您的浏览器不支持视频标签。
@@ -159,30 +172,30 @@
     </div>
 
     <!-- 介绍描述 -->
-    <div class="description container">
+    <div class="description">
         <p>“井底之蛙”是一个寓意深刻的成语，常用来形容眼界狭隘、不了解外面世界的人。以下是通过文生图生成的4个关键帧，展示了这只青蛙从井底到跳出井口，探索外面世界的过程。</p>
     </div>
 
     <!-- 场景一 -->
-    <section class="container fade-in">
+    <section>
         <h2>场景一：青蛙在井底</h2>
         <p>青蛙站在井底，仰望着狭小的井口。周围是湿润的井壁，青苔覆盖了墙壁，阳光透过井口微弱地照射进来。青蛙的视野被井壁限制，无法看到外面广阔的天地。</p>
     </section>
 
     <!-- 场景二 -->
-    <section class="container fade-in">
+    <section>
         <h2>场景二：青蛙跳跃向井口</h2>
         <p>青蛙不断地向井口跳跃，奋力向上爬。它的身体弯曲，双腿用力推地，眼中充满决心。它知道，只有跳出井底，才能看到更广阔的世界。</p>
     </section>
 
     <!-- 场景三 -->
-    <section class="container fade-in">
+    <section>
         <h2>场景三：井口外的辽阔世界</h2>
         <p>井口外的天空一片湛蓝，白云漂浮在空中。远处是一望无际的田野和高山，微风吹拂着树木，鸟儿在空中翱翔。青蛙从未见过如此美丽的景象，它被这片广阔的天地所震撼。</p>
     </section>
 
     <!-- 场景四 -->
-    <section class="container fade-in">
+    <section>
         <h2>场景四：青蛙跳出井口，看到新世界</h2>
         <p>最终，青蛙成功地跳出了井口，站在井边，眼前是无比辽阔的世界。它兴奋地四处张望，新的景象让它充满了好奇和激动。青蛙终于摆脱了井底的束缚，探索了一个全新的世界。</p>
     </section>
@@ -197,3 +210,4 @@
 
 </body>
 </html>
+
